@@ -1,0 +1,204 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Default CSS */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6em;
+  background-color: #fff;
+  color: #fff;
+  margin: 0;
+  background: url(images/background.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  
+  text-decoration: none;
+  color: #222;
+}
+
+/* Reset CSS */
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
+/* Common CSS */
+.headline-share {
+  text-align: center;
+}
+.headline-share h1 {
+  font-size: 56px;
+  font-weight: 500;
+  text-transform: capitalize;
+/*text-transform은 대문자로 또는 소문자로 바꾸는 속성입니다.  */
+/* text-transform: none | capitalize | uppercase | lowercase | initial | inherit
+none : 입력된 그대로 출력합니다.
+capitalize : 단어의 첫번째 글자를 대문자로 바꿉니다.
+uppercase : 모든 글자를 대문자로 바꿉니다.
+lowercase : 모든 글자를 소문자로 바꿉니다.
+initial : 기본값으로 설정합니다.
+inherit : 부모 요소의 속성값을 상속받습니다. */
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  margin-top:30px;
+
+}
+/* .headline-share hr {
+  height: 5px;
+  width: 80px;
+  border: none;
+  background: linear-gradient(to right, #1f8de6, #5ed6fe);
+} */
+.headline-share h1:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 80px;
+  background: linear-gradient(to right, #1f8de6, #5ed6fe);
+  /* background-color: crimson; */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* display: none; */
+}
+.font-noto {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+/* Section : Portfolio */
+section.portfolio {
+  /* overflow: visible; */
+  
+  display: grid;
+  margin:20px;
+  justify-items: center;
+  align-content: center;
+
+  /* grid-auto-rows: minmax(100px, auto); */
+}
+.items {
+  width:100%;
+  height: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-gap:10px;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+.items_row {
+ padding-top:30px;
+  width:100%;
+  display: grid;
+   grid-template-columns: repeat(4, 1fr); 
+  grid-gap:10px;
+
+  
+}
+/* 스크립트 */
+
+.item.thum .photo {
+  /* border: 1px solid #000; */
+  height: 400px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 15px 45px -10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.item.thum .photo img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: top;
+  transition: 2s;
+}
+.item.thum:hover .photo img {
+  object-position: bottom;
+}
+
+.item.thum span {
+  display: block;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.btn-view {
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.btn-view.pc {
+  background-color: crimson;
+}
+.btn-view.mobile {
+  background-color: royalblue
+}
+aside.item b {
+  font-weight: normal;
+  color: crimson;
+  font-size:18px;
+}
+aside.item h2 {
+  font-size: 26px;
+  margin-top: 15px;
+}
+aside.item .portfolio-info span {
+  display: list-item;
+  list-style: disc;
+  margin-left: 20px;
+}
+/* list-style-type 
+list-style-type: none ;none는 아무 기호가 없습니다
+list-style-type: disc;기본값으로 많은 목록에 쓰입니다. 점표시.
+list-style-type: circle; 동그라미 가운데가 비어있는 원 모양 입니다.
+list-style-type: square; 정사각형 모양입니다.
+list-style-type: decimal; 숫자로 나타냅니다.1.2.3.4......
+list-style-type: decimal-leading-zero; 0이 들어가있는 숫자로 표현됩니다.
+01.02.03.04.05....
+list-style-type: lower-roman;소문자 로마숫자입니다.
+list-style-type: lower-greek; 알파, 베타, 감마, 델타, 입실론...
+list-style-type: "\1F44D";유니코드 아이콘입니다.
+유니코드로 문자등을 나타낼수 있습니다.
+변환하기 링크참고  https://hi098123.tistory.com/118 */
+
+/* 과목화면 내용넣기*/
+.featherlight .featherlight-content {
+  margin-left: 0;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+.featherlight iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.featherlight .featherlight-close-icon {
+  position: absolute;
+  z-index: 9999;
+  top: 20px;
+  left: 20px;
+  line-height: 25px;
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  outline: none;
+}
